@@ -17,7 +17,8 @@
 14. 把公開鑰匙丟上github SSH keys
 15. ```ssh -T git@github.com```驗證
 16. 修改_config.yml資料
-17. ```
+17.
+ ```
 deploy:
   type: git
   repo: https://github.com/YourgithubName/YourgithubName.github.io.git
