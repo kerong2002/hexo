@@ -21,7 +21,7 @@
 ```
 deploy:
   type: git
-  repo: https://github.com/YourgithubName/YourgithubName.github.io.git
+  repo: git@github.com:yourname/yourname.github.io.git
   branch: master
 ```
 18. ```npm install hexo-deployer-git --save``` 需要部屬的工具
