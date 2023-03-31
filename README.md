@@ -1,30 +1,29 @@
 # hexo
-hexo使用手冊
-安裝與使用
-安裝Git 官方網站
-安裝Node.js 官方網站
-開啟您想要的目錄，例如 D:\kerong，右鍵點擊選擇 "Git Bash Here"
-在 Git Bash 執行指令 npm install -g hexo-cli 安裝 Hexo
-在 Git Bash 執行指令 npm install 安裝 Hexo 所需的依賴包
-在 GitHub 上建立一個新的 repositories，名稱為 username.github.io
-在 Git Bash 執行指令 git config --global user.name "yourname"，設置您的 GitHub 使用者名稱
-在 Git Bash 執行指令 git config --global user.email "youremail"，設置您的 GitHub 電子郵件地址
-驗證使用者名稱和電子郵件地址是否正確：在 Git Bash 執行指令 git config user.name 和 git config user.email
-創建 SSH 金鑰：在 Git Bash 執行指令 ssh-keygen -t rsa -C "youremail"
-打開電腦中的 .ssh 資料夾，找到名為 id_rsa.pub 的公開金鑰檔案，用文本編輯器打開
-把公開金鑰檔案的內容複製到 GitHub 上的 SSH keys 設置中
-在 Git Bash 執行指令 ssh -T git@github.com 驗證 SSH 連線是否正確
-修改 Hexo 的 _config.yml 設定檔案，指定部屬資訊
-在 _config.yml 中添加以下設定
+## hexo manual
+## 安裝使用
+
+1. 安裝 Git [Official Website](https://gitforwindows.org/)
+2. 安裝 Node.js [Official Website](https://nodejs.org/en/download)
+3. 請在您想要的路徑，比如 D:\\kerong 路徑下，開啟資料夾後，右鍵點選 "Git Bash Here"。
+4. 安裝 hexo-cli： `npm install -g hexo-cli`
+5. 安裝相關套件： `npm install`
+6. 註冊好 `username.github.io` 的 repository。
+7. 設定 git 使用者名稱： `git config --global user.name "yourname"`
+8. 設定 git 使用者信箱： `git config --global user.email "youremail"`
+9. 驗證使用者名稱的郵件是否正確： `git config user.name`
+10. 驗證使用者信箱是否正確： `git config user.email`
+11. 創建 SSH 金鑰： `ssh-keygen -t rsa -C "youremail"`
+12. 從電腦中 .ssh 資料夾搜尋 `id_rsa.pub` 的檔案，用 nodepad 開啟。
+13. 把公開鑰匙丟上 GitHub SSH keys。
+14. 驗證： `ssh -T git@github.com`
+15. 修改 `_config.yml` 資料：
 ```yaml
-Copy code
 deploy:
   type: git
   repo: git@github.com:yourname/yourname.github.io.git
   branch: master
 ```
-在 Git Bash 執行指令 npm install hexo-deployer-git --save 安裝部屬工具
-在 Git Bash 執行指令 hexo clean，清除 Hexo 產生的檔案
-在 Git Bash 執行指令 hexo generate，生成靜態網頁
-在 Git Bash 執行指令 hexo deploy，部屬網頁到 GitHub 上
-您的 Hexo 靜態網站已成功部屬到您的 GitHub Pages 上
+16. 安裝需要部屬的工具： `npm install hexo-deployer-git --save`
+17. 刪除之前生成的網站資料： `hexo clean`
+18. 重新生成網站資料： `hexo generate`
+19. 部署網站： `hexo deploy`
